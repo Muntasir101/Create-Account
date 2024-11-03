@@ -16,7 +16,7 @@ document
     document.getElementById("successMessage").textContent = "";
 
     // Username validation
-    const usernameRegex = /^(?![0-9])[A-Za-z0-9_]{3,15}$/;
+    const usernameRegex = /^(?![0-9])[A-Za-z0-9_]{3,16}$/;
     if (!usernameRegex.test(username)) {
       document.getElementById("usernameError").textContent =
         "Username must be 3-15 characters long and cannot start with a number.";
@@ -33,7 +33,7 @@ document
     }
 
     // Age validation
-    if (age < 1 || age > 30) {
+    if (age < 1 || age >= 30) {
       document.getElementById("ageError").textContent =
         "Age must be between 1 and 30 years.";
       isValid = false;
