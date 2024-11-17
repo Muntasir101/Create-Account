@@ -16,7 +16,7 @@ document
     document.getElementById("successMessage").textContent = "";
 
     // Username validation
-    const usernameRegex = /^(?![0-9])[A-Za-z0-9_]{3,16}$/;
+    const usernameRegex = /^(?![0-9])[A-Za-z0-9_]{3,15}$/;
     if (!usernameRegex.test(username)) {
       document.getElementById("usernameError").textContent =
         "Username must be 3-15 characters long and cannot start with a number.";
@@ -25,7 +25,7 @@ document
 
     // Password validation
     const passwordRegex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/;
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if (!passwordRegex.test(password)) {
       document.getElementById("passwordError").textContent =
         "Password must include uppercase, lowercase, number, and special character.";
