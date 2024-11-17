@@ -25,7 +25,7 @@ document
 
     // Password validation
     const passwordRegex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/;
     if (!passwordRegex.test(password)) {
       document.getElementById("passwordError").textContent =
         "Password must include uppercase, lowercase, number, and special character.";
