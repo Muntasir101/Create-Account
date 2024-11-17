@@ -33,7 +33,7 @@ document
     }
 
     // Age validation
-    if (age < 1 || age <= 30) {
+    if (age < 1 || age > 30) {
       document.getElementById("ageError").textContent =
         "Age must be between 1 and 30 years.";
       isValid = false;
