@@ -25,11 +25,15 @@ document
 
     // Password validation
     const passwordRegex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/;
+
     if (!passwordRegex.test(password)) {
-      document.getElementById("passwordError").textContent =
-        "Password must include uppercase, lowercase, number, and special character.";
-      isValid = false;
+    document.getElementById("passwordError").textContent =
+      "Password must be exactly 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.";
+    isValid = false;
+    } else {
+    // Clear the error message if the password is valid
+    document.getElementById("passwordError").textContent = "";
     }
 
     // Age validation
